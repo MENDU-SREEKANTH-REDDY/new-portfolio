@@ -1,6 +1,6 @@
 // src/components/Navbar.jsx
 import React, { useState, useEffect } from "react";
-
+import "./Navbar.css";
 const sections = [
   { id: "intro", label: "INTRO" },
   { id: "skills", label: "SKILLS" },

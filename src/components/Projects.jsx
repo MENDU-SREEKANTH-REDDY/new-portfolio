@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import "./projects.css";
+import "./Projects.css";
 import wanderlustImg from "../assets/wanderlust.png";
 import spotifyImg from "../assets/spotify.png";
 import blogImg from "../assets/blog.png";
