@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import './skills.css';
+import './Skills.css';
 import {
   FaDatabase,
   FaTools,
