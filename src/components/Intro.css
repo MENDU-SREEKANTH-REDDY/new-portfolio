@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+.font-heading {
+  font-family: 'Playfair Display', serif;
+}
+
+@keyframes scaleImage {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-bgScale {
+  animation: scaleImage 10s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
+/* Line grow and shrink */
+@keyframes growLineX {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+.animate-growLineX {
+  animation: growLineX 1s cubic-bezier(.87,-.41,.19,1.44) forwards;
+  transform-origin: center;
+}
+@keyframes shrinkLineX {
+  0% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+}
+.animate-shrinkLineX {
+  animation: shrinkLineX 1s cubic-bezier(.87,-.41,.19,1.44) forwards;
+  transform-origin: center;
+}
+
+/* Pop out text */
+@keyframes popOut {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.animate-popOut {
+  animation: popOut 0.4s ease-out forwards;
+}
+
+
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .intro-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .intro-image {
+    margin-bottom: 1.5rem;
+  }
+
+  .intro-content {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .intro-heading {
+    font-size: 2rem;
+  }
+
+  .intro-line {
+    width: 100%;
+  }
+
+  .intro-content {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-heading {
+    font-size: 1.5rem;
+  }
+
+  .intro-content {
+    font-size: 0.9rem;
+  }
+}

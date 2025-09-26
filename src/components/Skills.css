@@ -1,0 +1,123 @@
+.skills-section {
+  background-image: url('../assets/expirencebg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 2rem;
+  position: relative;
+  min-height: 100vh;
+}
+
+.skills-title{
+      font-family: 'Playfair Display', serif;
+
+}
+
+.skills-overlay {
+  background-color: rgba(0, 0, 0, 0.75); 
+  padding: 3rem;
+  border-radius: 12px;
+  color: white;
+  backdrop-filter: blur(20px);
+}
+
+.skills-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.tools-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-top: 3rem;
+  gap: 2rem;
+}
+
+.skill-box {
+  background-color: rgba(255, 255, 255, 0.12); 
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.skill-box:hover {
+  transform: translateY(-5px);
+}
+
+.skill-box h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.icons {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.icon {
+  color: cyan;
+  font-size: 1.2rem;
+}
+
+.timeline-line {
+  position: absolute;
+   top: 12rem;  
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 80%; 
+  background-color: cyan;
+  z-index: 1;
+}
+
+.timeline-line::after {
+  content: '↓';
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  color: cyan;
+}
+@media (max-width: 1024px) {
+  .skills-overlay {
+    padding: 2rem;
+  }
+  .skills-title {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .skills-title {
+    font-size: 1.6rem;
+  }
+  .skills-grid, .tools-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Extra small mobile */
+@media (max-width: 480px) {
+  .skills-overlay {
+    padding: 1.5rem;
+  }
+  .skills-title {
+    font-size: 1.4rem;
+  }
+}
+

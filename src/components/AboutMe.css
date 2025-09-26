@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+.font-heading {
+  font-family: 'Playfair Display', serif;
+}
+
+@keyframes aboutMeFadeIn {
+  0%   { opacity: 0; transform: translateY(40px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+.animate-aboutMeFadeIn {
+  animation: aboutMeFadeIn 1s cubic-bezier(.87,-.41,.19,1.44) forwards;
+}
+
+.bg-neutral-900\/80 {
+  background-color: rgba(23,23,23,0.8);
+}
+
+/* -------- Responsive Tweaks -------- */
+
+/* Mobile & Tablet Layout Adjustments */
+@media (max-width: 1024px) {
+  .about-me-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem; /* Equal left/right spacing */
+  }
+
+  .about-me-section img {
+    width: 16rem;
+    height: 16rem;
+    margin-bottom: 1.2rem; /* Reduced gap */
+  }
+
+  .about-me-section .bg-neutral-900\/80 {
+    padding: 1.5rem;
+    text-align: center;
+    width: 100%;
+    max-width: 90%; /* Prevents touching screen edges */
+  }
+
+  .about-me-section h2 {
+    font-size: 2rem;
+  }
+
+  .about-me-section h3 {
+    font-size: 1.4rem;
+    margin-top: 0.3rem;
+  }
+
+  .about-me-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+/* Mobile Fine-tuning (max-width: 480px) */
+@media (max-width: 480px) {
+  .about-me-section img {
+    width: 14rem;
+    height: 14rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-me-section .bg-neutral-900\/80 {
+    max-width: 95%;
+    padding: 1.2rem;
+  }
+}
